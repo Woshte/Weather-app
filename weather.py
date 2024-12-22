@@ -26,7 +26,13 @@ def get_current_weather(lat, lon, API_key):
         main=resp.get('weather')[0].get('main',)
         description=resp.get('weather')[0].get('description',)
         icon=resp.get('weather')[0].get('icon',)
+        temperature=resp.get('weather')[0].get('temp',)
     )
+
+def main(city_name, state_name, country_name):
+    lat, lon = get_lan_lon('Nairobi','','Kenya',api_key)
+    weather_data = get_current_weather(lat, lon, api_key)
+    return weather_data
 
 if __name__ == "__main__":
 
