@@ -30,7 +30,7 @@ def get_current_weather(lat, lon, API_key):
     )
 
 def main(city_name, state_name, country_name):
-    lat, lon = get_lan_lon('Nairobi','','Kenya',api_key)
+    lat, lon = get_lan_lon('Nairobi','ON','Kenya',api_key)
     weather_data = get_current_weather(lat, lon, api_key)
     return weather_data
 
